@@ -1,0 +1,23 @@
+{
+  "name": "esmolina-rss-simple-crud-api",
+  "version": "1.0.0",
+  "description": "RSSchool task",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.ts",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://git@github.com:esmolina/rss-simple-crud-api.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "esmolina",
+  "license": "ISC",
+  "bugs": {
+  },
+  "homepage": "https://github.com/esmolina?tab=repositories"
+}
