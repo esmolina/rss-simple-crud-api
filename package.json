@@ -21,6 +21,7 @@
   "homepage": "https://github.com/esmolina?tab=repositories",
   "devDependencies": {
     "@types/node": "^18.11.18",
+    "@types/uuid": "^9.0.2",
     "@typescript-eslint/eslint-plugin": "^5.48.2",
     "@typescript-eslint/parser": "^5.48.2",
     "@webpack-cli/generators": "^3.0.1",
@@ -36,6 +37,7 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "i": "^0.3.7",
-    "npm": "^9.7.2"
+    "npm": "^9.7.2",
+    "uuid": "^9.0.0"
   }
 }
