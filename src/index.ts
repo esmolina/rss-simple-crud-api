@@ -15,6 +15,15 @@ const server = createServer((request: IncomingMessage, response: ServerResponse)
   if (url === '/api/users' && method) {
     processingAllUsersRequest(method, request, response);
   } else if (url && url.startsWith('/api/users/') && method) {
+    const segments = url.split('/');
+
+    if (segments.length > 4) {
+      response.statusCode = 404;
+      response.setHeader('Content-Type', 'text/plain');
+      response.end('You are sending a request to a non-existent resource');
+      return;
+    }
+
     processingSpecificUserRequest(method, url, request, response);
   } else if (url === '/') {
     response.statusCode = 200;
@@ -25,7 +34,7 @@ const server = createServer((request: IncomingMessage, response: ServerResponse)
   } else {
     response.statusCode = 404;
     response.setHeader('Content-Type', 'text/plain');
-    response.end('Not Found');
+    response.end('You are sending a request to a non-existent resource');
   }
 });
 
