@@ -1,9 +1,11 @@
+import dotenv from 'dotenv';
 import { env } from 'process';
 import { createServer, IncomingMessage, ServerResponse } from 'http';
 import { processingAllUsersRequest } from './helpers/processingAllUsersRequest.js';
 import { processingSpecificUserRequest } from './helpers/processingSpecificUserRequest.js';
 import { UserInterface } from './types/User';
 
+dotenv.config();
 const envPort = env.PORT;
 const port = envPort ? parseInt(envPort, 10) : 3000;
 const host = '127.0.0.1';
