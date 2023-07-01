@@ -5,8 +5,8 @@
   "main": "index.ts",
   "type": "module",
   "scripts": {
-    "dev": "nodemon",
-    "prod": "tsc && node dist/index.js"
+    "start:dev": "nodemon",
+    "start:prod": "tsc && node dist/index.js"
   },
   "repository": {
     "type": "git",
