@@ -1,5 +1,5 @@
 import { env } from 'process';
-import { createServer, Server, IncomingMessage, ServerResponse } from 'http';
+import { createServer, IncomingMessage, ServerResponse } from 'http';
 import { processingAllUsersRequest } from './helpers/processingAllUsersRequest.js';
 import { processingSpecificUserRequest } from './helpers/processingSpecificUserRequest.js';
 import { UserInterface } from './types/User';
@@ -36,6 +36,13 @@ const server = createServer((request: IncomingMessage, response: ServerResponse)
     response.setHeader('Content-Type', 'text/plain');
     response.end('You are sending a request to a non-existent resource');
   }
+});
+
+server.on('error', (error: Error, response: ServerResponse) => {
+  response.statusCode = 500;
+  response.setHeader('Content-Type', 'text/plain');
+  response.end('Internal Server Error');
+  console.error(`Server error: ${error}`);
 });
 
 server.listen(port, () => {
