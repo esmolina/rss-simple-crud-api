@@ -21,7 +21,7 @@ export const createUser: RequestHandlerType = (request, response) => {
         typeof createdUserBody.username !== 'string' ||
         typeof createdUserBody.age !== 'number' ||
         !Array.isArray(createdUserBody.hobbies) ||
-        isCorrectTypeOfHobbies(createdUserBody.hobbies)
+        !isCorrectTypeOfHobbies(createdUserBody.hobbies)
       ) {
         response.statusCode = 400;
         response.setHeader('Content-Type', 'text/plain');
@@ -44,7 +44,7 @@ export const createUser: RequestHandlerType = (request, response) => {
       response.setHeader('Content-Type', 'application/json');
       response.end(JSON.stringify(newUser));
     } catch (error) {
-      response.statusCode = 400;
+      response.statusCode = 405;
       response.setHeader('Content-Type', 'text/plain');
       response.end('Invalid request body');
     }
