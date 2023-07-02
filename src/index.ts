@@ -11,7 +11,7 @@ const port = envPort ? parseInt(envPort, 10) : 3000;
 const host = '127.0.0.1';
 export const users: Array<UserInterface> = [];
 
-const server = createServer((request: IncomingMessage, response: ServerResponse) => {
+export const server = createServer((request: IncomingMessage, response: ServerResponse) => {
   const { url, method } = request;
 
   if (url === '/api/users' && method) {

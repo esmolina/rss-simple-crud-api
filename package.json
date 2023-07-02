@@ -5,7 +5,9 @@
   "main": "index.ts",
   "scripts": {
     "start:dev": "nodemon",
-    "start:prod": "tsc && node dist/index.js"
+    "start:prod": "tsc && node dist/index.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
