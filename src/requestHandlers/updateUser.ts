@@ -1,6 +1,6 @@
-import { RequestByIdHandlerType } from '../types/serverHandlersTypes.js';
-import { users } from '../index.js';
-import { isCorrectTypeOfHobbies } from '../helpers/isCorrectTypeOfHobbies.js';
+import { RequestByIdHandlerType } from '../types/serverHandlersTypes';
+import { users } from '../index';
+import { isCorrectTypeOfHobbies } from '../helpers/isCorrectTypeOfHobbies';
 
 export const updateUser: RequestByIdHandlerType = (request, response, userId) => {
   const user = users.find((user) => user.id === userId);

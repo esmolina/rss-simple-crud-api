@@ -1,5 +1,5 @@
-import { RequestByIdHandlerType } from '../types/serverHandlersTypes.js';
-import { users } from '../index.js';
+import { RequestByIdHandlerType } from '../types/serverHandlersTypes';
+import { users } from '../index';
 
 export const getUser: RequestByIdHandlerType = (request, response, userId) => {
   const user = users.find((user) => user.id === userId);

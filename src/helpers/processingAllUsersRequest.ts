@@ -1,6 +1,6 @@
-import { AllUsersRequestHandlerType } from '../types/serverHandlersTypes.js';
-import { getUsers } from '../requestHandlers/getUsers.js';
-import { createUser } from '../requestHandlers/createUser.js';
+import { AllUsersRequestHandlerType } from '../types/serverHandlersTypes';
+import { getUsers } from '../requestHandlers/getUsers';
+import { createUser } from '../requestHandlers/createUser';
 
 export const processingAllUsersRequest: AllUsersRequestHandlerType = (
   method,

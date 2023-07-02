@@ -1,8 +1,8 @@
 import dotenv from 'dotenv';
 import { env } from 'process';
 import { createServer, IncomingMessage, ServerResponse } from 'http';
-import { processingAllUsersRequest } from './helpers/processingAllUsersRequest.js';
-import { processingSpecificUserRequest } from './helpers/processingSpecificUserRequest.js';
+import { processingAllUsersRequest } from './helpers/processingAllUsersRequest';
+import { processingSpecificUserRequest } from './helpers/processingSpecificUserRequest';
 import { UserInterface } from './types/User';
 
 dotenv.config();

@@ -1,8 +1,8 @@
-import { SpecificUserRequestHandlerType } from '../types/serverHandlersTypes.js';
-import { getUser } from '../requestHandlers/getUser.js';
-import { updateUser } from '../requestHandlers/updateUser.js';
-import { deleteUser } from '../requestHandlers/deleteUser.js';
-import { validateIdByUuid } from './validateIdByUuid.js';
+import { SpecificUserRequestHandlerType } from '../types/serverHandlersTypes';
+import { getUser } from '../requestHandlers/getUser';
+import { updateUser } from '../requestHandlers/updateUser';
+import { deleteUser } from '../requestHandlers/deleteUser';
+import { validateIdByUuid } from './validateIdByUuid';
 
 export const processingSpecificUserRequest: SpecificUserRequestHandlerType = (
   method,

@@ -1,5 +1,5 @@
-import { RequestHandlerType } from '../types/serverHandlersTypes.js';
-import { users } from '../index.js';
+import { RequestHandlerType } from '../types/serverHandlersTypes';
+import { users } from '../index';
 
 export const getUsers: RequestHandlerType = (request, response) => {
   response.statusCode = 200;

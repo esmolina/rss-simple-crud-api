@@ -1,8 +1,8 @@
 import { v4 as uuid } from 'uuid';
-import { UserInterface } from '../types/User.js';
-import { RequestHandlerType } from '../types/serverHandlersTypes.js';
-import { isCorrectTypeOfHobbies } from '../helpers/isCorrectTypeOfHobbies.js';
-import { users } from '../index.js';
+import { UserInterface } from '../types/User';
+import { RequestHandlerType } from '../types/serverHandlersTypes';
+import { isCorrectTypeOfHobbies } from '../helpers/isCorrectTypeOfHobbies';
+import { users } from '../index';
 
 export const createUser: RequestHandlerType = (request, response) => {
   let body = '';
