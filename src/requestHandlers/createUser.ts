@@ -12,6 +12,14 @@ export const createUser: RequestHandlerType = (request, response) => {
 
   request.on('end', () => {
     try {
+      const contentType = request.headers['content-type'];
+      if (!contentType || !contentType.includes('application/json')) {
+        response.statusCode = 400;
+        response.setHeader('Content-Type', 'text/plain');
+        response.end('Invalid request body: Only JSON content type is supported');
+        return;
+      }
+
       const createdUserBody = JSON.parse(body);
 
       if (
