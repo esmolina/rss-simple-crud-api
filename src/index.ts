@@ -8,7 +8,7 @@ import { UserInterface } from './types/User';
 dotenv.config();
 const envPort = env.PORT;
 const port = envPort ? parseInt(envPort, 10) : 3000;
-const host = '127.0.0.1';
+const host = 'localhost';
 export const users: Array<UserInterface> = [];
 
 export const server = createServer((request: IncomingMessage, response: ServerResponse) => {
