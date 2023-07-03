@@ -42,6 +42,11 @@ or
 - PUT try sending invalid data;
 - DELETE (http://localhost:3000/api/users/{createdUserId}) to delete created user;
 
+### Dotenv
+In the root folder of the project rename .env.example to .env and
+start the server. You will see that it is running on port 4000. 
+Previously, it was running on port 3000.
+
 ### Production mode
 Command `npm run start:prod` will start the build (production mode). 
 Terminate process and after this you will see the dist folder in the root directory.
